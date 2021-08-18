@@ -1,8 +1,8 @@
-f = imread(".\images\skeleton.jpg");
-
+f = imread(".\images\desk.jpg");
+w = fspecial('motion', 50, 45);
 % g = imfilter ( f , w, filtering_mode , boundary_options , size_options)
 
-w = ones(31);
+%w = ones(31);
 % g = imfilter(f, w, 'replicate');
 % g = imfilter(f, w, 'conv', 'replicate');
 %g = imfilter(f, rot90(w, 2), 'replicate');
