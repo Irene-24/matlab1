@@ -14,3 +14,5 @@ disp(w)
 disp(wmax)
 disp(wmin)
 end
+
+% Imblend function adds two images

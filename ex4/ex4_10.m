@@ -1,0 +1,10 @@
+[M,N]=size(f);
+[f,revertclass]tofloat(f);
+F=fft2(f);
+S=gscale(log(1+abs(fftshift(F))));
+imshow(S);
+H=recnotch('reject','vertical',M,N,3,15,15);
+figure,imshow(fftshift(H))
+g=dftfilt(f,H);
+g=revertclass(g);
+figure,imshow(g)
