@@ -9,18 +9,18 @@ w = ones(31);
 %imshow(g);
 
 gd = imfilter(f, w);
-% imshow(gd, [ ]);
+imshow(gd, [ ]);
 
 gr = imfilter(f, w, 'replicate');
-%figure, imshow(gr, [ ]);
+figure, imshow(gr, [ ]);
 
 gs = imfilter(f, w, 'symmetric');
-%figure, imshow(gs, [ ]);
+figure, imshow(gs, [ ]);
 
 gc = imfilter(f, w, 'circular');
-%figure, imshow(gc, [ ])
+figure, imshow(gc, [ ])
 
 f8 = im2uint8(f);
 g8r = imfilter(f8, w, 'replicate');
-%figure, imshow(g8r, [ ]);
+figure, imshow(g8r, [ ]);
 
