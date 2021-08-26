@@ -5,8 +5,8 @@ original = imread("./images/desk.jpg");
 f = rgb2gray(original);
 
 %pepper
-[ M , N] = size ( f ) ;
-R = imnoise2 ( 'salt & pepper' , M , N , 0.1 , 0 ) ;
+[ M , N] = size ( f ) ; %[row , column]
+R = imnoise2 ( 'salt & pepper' , M , N , 0.1 , 0 ) ; %[type,row,column,mean,sd]
 gp = f ;
 gp ( R == 0 ) = 0 ;  %turn pixel val to black ie pepper
 
