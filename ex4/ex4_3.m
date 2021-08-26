@@ -43,4 +43,4 @@ disp(min(d(:)));
 [U,V]=dftuv(8,5);
 DSQ=U.^2+V.^2;
 disp(DSQ)
-disp(fftshift(DSQ)
+disp(fftshift(DSQ))

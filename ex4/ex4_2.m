@@ -11,7 +11,7 @@ g=revertclass(g);
 imgshow(g);
 
 PQ=paddedsize(size(f));
-Fp=fft2(f,PQ(1),PQ2));
+Fp=fft2(f,PQ(1),PQ(2));
 Hp=lpfilter('gaussian',PQ(1),PQ(2),2*sig);
 Gp=Hp.*Fp;
 gp=ifft2(Gp);

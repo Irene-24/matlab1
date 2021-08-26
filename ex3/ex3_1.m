@@ -2,7 +2,7 @@ f = imread(".\images\mammogram.jpeg");
 g1 = imadjust( f, [0 1], [1 0] ) ;
 g2 = imadjust( f, [0.5 0.75 ], [ 0 1 ] ) ;
 g3 = imadjust( f , [ ] , [ ] , 2 ) ;
-g4 = imadjust( f , stretchlim( f ) , [ ] ) ;
+g4 = imadjust( f , stretchlim( f ) , [ ] ) ; %use image values to determine input range with stretchlim
 g5 = imadjust( f , stretchlim( f ) , [1 0] ) ;
 
 figure('Name','Original','NumberTitle','off'),
