@@ -20,12 +20,16 @@ fs = spfilt ( gs , 'chmean' , 3 , 3 , -1.5 ) ;
 fpmax=spfilt ( gp , 'max' , 3 , 3 ) ;
 fsmin=spfilt ( gs , 'min' , 3 , 3 ) ;
 
-subplot(4,2,1); imshow(original); title("Original");
-subplot(4,2,2);imshow(f);title("Grey Scale");
-subplot(4,2,3); imshow(gp);title("Pepper");
-subplot(4,2,4);imshow(gs);title("Salt");
-subplot(4,2,5); imshow(fp); title("Filter P");
-subplot(4,2,6);imshow(fs);title("Filter S");
-subplot(4,2,7); imshow(fpmax);title("FPMax");
-subplot(4,2,8);imshow(fsmax);title("FPmin");
+figure
+subplot(2,2,1); imshow(original); title("Original");
+subplot(2,2,2);imshow(f);title("Grey Scale");
+subplot(2,2,3); imshow(gp);title("Pepper");
+subplot(2,2,4);imshow(gs);title("Salt");
+
+figure,
+
+subplot(2,2,1); imshow(fp); title("Filter P");
+subplot(2,2,2);imshow(fs);title("Filter S");
+subplot(2,2,3); imshow(fpmax);title("FPMax");
+subplot(2,2,4); imshow(fsmin);title("FPmin");
 
